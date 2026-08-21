@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer components {
+  /* Romantic glass card */
+  .romantic-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(254, 205, 214, 0.45);
+  }
+
+  .romantic-glass-dark {
+    background: rgba(34, 18, 28, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(244, 63, 104, 0.2);
+  }
+
+  /* Shimmering gold foil text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #bfa060 0%, #ede2cc 40%, #a38249 70%, #cfb27e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Romantic rose gradient text */
+  .text-romantic-gradient {
+    background: linear-gradient(135deg, #f43f68 0%, #be1243 60%, #881337 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Luxury subtle button */
+  .btn-romantic {
+    @apply relative overflow-hidden bg-romantic-500 hover:bg-romantic-600 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-romantic-md hover:shadow-romantic-lg active:scale-95;
+  }
+
+  .btn-romantic-outline {
+    @apply border border-romantic-300 text-romantic-700 hover:bg-romantic-50 font-medium px-6 py-3 rounded-full transition-all duration-300 active:scale-95;
+  }
+
+  .btn-champagne {
+    @apply bg-gradient-to-r from-champagne-500 to-champagne-600 hover:from-champagne-600 hover:to-champagne-700 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-champagne-glow active:scale-95;
+  }
+}
+
+/* Custom romantic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fecdd6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fda4b4;
+}
